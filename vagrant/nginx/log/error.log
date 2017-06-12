@@ -1,0 +1,12 @@
+2017/06/12 15:29:43 [error] 17652#0: *33 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+exception 'ReflectionException' with message 'Class custom\View does not exist' in /app/vendor/yiisoft/yii2/di/Container.php:424
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/di/Container.php(424): ReflectionClass->__construct('custom\View')
+#1 /app/vendor/yiisoft/yii2/di/Container.php(364): yii\di\Container->getDependencies('custom\View')
+#2 /app/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('custom\View', Array, Array)
+#3 /app/vendor/yiisoft/yii2/BaseYii.php(348): yii\di\Container->get('custom\View', Array, Array)
+#4 /app/vendor/yiisoft/yii2/di/ServiceLocator.php(135): yii\BaseYii::createObject(Array)
+#5 /app/vendor/yiisoft/yii2/base/Application.php(559): yii\di\ServiceLocator->get('view')
+#6 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(249): yii\base\Application->getView()
+#7 /app/vendor/yiisoft/yii2/web/ErrorHandler.php(116): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#8 /app/vendor/yiisoft/yii2/base/Error" while reading upstream, client: 192.168.85.1, server: tajmahal.dev, request: "GET /index.php?r=site%2Findex HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "tajmahal.dev", referrer: "http://tajmahal.dev/index.php?r=site%2Fabout"
