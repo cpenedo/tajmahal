@@ -4,12 +4,21 @@
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model app\models\ContactForm */
 
+use dosamigos\google\maps\LatLng;
+use dosamigos\google\maps\Map;
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 
 $this->title = 'Contact';
 $this->params['breadcrumbs'][] = $this->title;
+
+$coord = new LatLng(['lat' => 38.7066725, 'lng' => -8.973343]);
+$map = new Map([
+    'center' => $coord,
+    'zoom' => 14,
+]);
+
 ?>
 <div class="site-contact">
     <h1><?= Html::encode($this->title) ?></h1>
@@ -61,6 +70,9 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <?php ActiveForm::end(); ?>
 
+            </div>
+            <div class="col-lg-5">
+                <?php echo $map->display()?>
             </div>
         </div>
 
