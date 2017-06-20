@@ -54,6 +54,16 @@ class SiteController extends Controller
         ];
     }
 
+    public function actionLangen(){
+        Yii::$app->session->set('language', 'en-EN'); //or $_GET['lang']
+        return $this->render('index');
+    }
+
+    public function actionLangpt(){
+        Yii::$app->session->set('language', 'pt-PT'); //or $_GET['lang']
+        return $this->render('index');
+    }
+
     /**
      * Displays homepage.
      *

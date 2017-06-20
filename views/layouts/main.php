@@ -14,7 +14,7 @@ AppAsset::register($this);
 ?>
 
 <style>
-    body {
+    .wrap {
         background-image: url("http://tajmahal.dev/images/bar3.jpg");
         background-repeat:no-repeat;
 
@@ -48,7 +48,7 @@ AppAsset::register($this);
         ->save(Yii::getAlias('@webroot/images/logo.jpg'), ['jpeg_quality' => 100]);
 
     NavBar::begin([
-        'brandLabel' => \yii\helpers\Html::img('@web/images/tm_logo_branco_baixo.png', ['style' => 'width: 80px; height: 35px'])
+        'brandLabel' => \yii\helpers\Html::img('@web/images/tm_logo_branco_baixo.png', ['style' => 'width: 80px; height: 35px, padding-bottom: 10px;'])
     /*'<span>'.\yii\helpers\Html::img('@web/images/logo.jpg').*/,//.'</span>',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
@@ -82,7 +82,6 @@ AppAsset::register($this);
 <footer class="footer">
     <div class="container">
         <p style="text-align: center">&copy; Taj Mahal The Premium Cocktail Bar <?= date('Y') ?></p>
-
     </div>
 </footer>
 

@@ -20,7 +20,7 @@ $map = new Map([
 ]);
 
 ?>
-<div class="site-contact">
+<div class="site-contact" style="color: white;;">
     <h1><?= Html::encode($this->title) ?></h1>
 
     <?php if (Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
@@ -48,7 +48,7 @@ $map = new Map([
         </p>
 
         <div class="row">
-            <div class="col-lg-5">
+            <div class="col-md-6">
 
                 <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
 
@@ -58,7 +58,7 @@ $map = new Map([
 
                     <?= $form->field($model, 'subject') ?>
 
-                    <?= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
+                    <?= $form->field($model, 'body')->textarea(['rows' => 6, 'style' => 'resize:vertical']) ?>
 
                     <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
                         'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
@@ -71,7 +71,7 @@ $map = new Map([
                 <?php ActiveForm::end(); ?>
 
             </div>
-            <div class="col-lg-5">
+            <div class="col-md-6">
                 <?php echo $map->display()?>
             </div>
         </div>

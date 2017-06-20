@@ -5,9 +5,34 @@ $db = require(__DIR__ . '/db.php');
 
 $config = [
     'id' => 'basic',
+    'language' => 'en-EN',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'components' => [
+        'i18n' => [
+            'translations' => [
+                'app*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    //'basePath' => '@app/messages',
+                    //'sourceLanguage' => 'en-US',
+                    'fileMap' => [
+                        'app' => 'app.php',
+                        'app/error' => 'error.php',
+                    ],
+                ],
+            ],
+        ],
+        'assetManager' => [
+            'bundles' => [
+                'dosamigos\google\maps\MapAsset' => [
+                    'options' => [
+                        'key' => 'AIzaSyDYHsKF9To_B2kIuFxUlyfP2Jqw3SVQ4rU',
+                        'language' => 'en',
+                        'version' => '3.1.18'
+                    ]
+                ]
+            ]
+        ],
         /*'view' => [
             'theme' => [
                 'pathMap' => ['@app/views' => 'themes/in-the-mountains'],
