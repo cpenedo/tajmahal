@@ -65,35 +65,19 @@ $this->title = 'Sobre Nós';
         O Flair Bartending está-nos também no sangue e na ponta dos dedos pelo que pode ainda contar com requinte nas técnicas de bar, presenteadas com Working Flair para além de saborosas bebidas preparadas com enorme gosto, vontade e paixão!
     </p>
 
-
         <div class="row" style="color: white;">
             <div class="col-md-3">
-                <?= \yii\helpers\Html::img('@web/images/jx1.jpg', ['onmouseover'=>"$(this).attr('src', 'http://www.google.de/logos/classicplus.png');", 'onmouseout' => "", 'style' => 'width: 200px; height: 200px;'])?>
+                <?= \yii\helpers\Html::img('@web/images/jx1.jpg', ['onmouseover'=>"$(this).attr('src', '/images/jx1-subtitle.jpg');", 'onmouseout' => "$(this).attr('src', '/images/jx1.jpg');", 'style' => 'width: 200px; height: 200px;'])?>
             </div>
             <div class="col-md-3">
-                <?= \yii\helpers\Html::img('@web/images/jx2.jpg', ['id' => 'imgtest', 'onmouseover' => 'bigImg(this)', 'onmouseout'=>"normalImg(this)", 'style' => 'width: 200px; height: 200px;'])?>
+                <?= \yii\helpers\Html::img('@web/images/jx2.jpg', ['onmouseover'=>"$(this).attr('src', '/images/jx2-subtitle.jpg');", 'onmouseout' => "$(this).attr('src', '/images/jx2.jpg');", 'style' => 'width: 200px; height: 200px;'])?>
             </div>
             <div class="col-md-3">
-                <?= \yii\helpers\Html::img('@web/images/tr1.jpg', ['style' => 'width: 200px; height: 200px;'])?>
+                <?= \yii\helpers\Html::img('@web/images/tr1.jpg', ['onmouseover'=>"$(this).attr('src', '/images/tr1-subtitle.jpg');", 'onmouseout' => "$(this).attr('src', '/images/tr1.jpg');", 'style' => 'width: 200px; height: 200px;'])?>
             </div>
             <div class="col-md-3">
-                <?= \yii\helpers\Html::img('@web/images/tr2.jpg', ['style' => 'width: 200px; height: 200px;'])?>
+                <?= \yii\helpers\Html::img('@web/images/tr2.jpg', ['onmouseover'=>"$(this).attr('src', '/images/tr2-subtitle.jpg');", 'onmouseout' => "$(this).attr('src', '/images/tr2.jpg');", 'style' => 'width: 200px; height: 200px;'])?>
             </div>
         </div>
-    <div class="row" style="color: white;">
-        <div class="col-md-6">
-            <p>
-                NOME: JOÃO Filipe de Almeida XAVIER
-                DATA DE NASCIMENTO : 14 / 06 / 1987
-            </p>
-        </div>
-        <div class="col-md-6">
-            <p>
-                NOME: TIAGO André RAMOS
-                DATA DE NASCIMENTO : 16 / 11 / 1988
-            </p>
-        </div>
-    </div>
-
 
     </div>

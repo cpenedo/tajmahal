@@ -55,12 +55,14 @@ class SiteController extends Controller
     }
 
     public function actionLangen(){
-        Yii::$app->session->set('language', 'en-EN'); //or $_GET['lang']
+        Yii::$app->language = 'en-EN';
+        //Yii::$app->session->set('language', 'en-EN'); //or $_GET['lang']
         return $this->render('index');
     }
 
     public function actionLangpt(){
-        Yii::$app->session->set('language', 'pt-PT'); //or $_GET['lang']
+        Yii::$app->language = 'pt-PT';
+        //Yii::$app->session->set('language', 'pt-PT'); //or $_GET['lang']
         return $this->render('index');
     }
 
@@ -79,7 +81,7 @@ class SiteController extends Controller
      *
      * @return Response|string
      */
-    public function actionLogin()
+    /*public function actionLogin()
     {
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
@@ -92,7 +94,7 @@ class SiteController extends Controller
         return $this->render('login', [
             'model' => $model,
         ]);
-    }
+    }*/
 
     /**
      * Logout action.
@@ -142,5 +144,25 @@ class SiteController extends Controller
     public function actionConcept()
     {
         return $this->render('concept');
+    }
+
+    /**
+     * Displays about page.
+     *
+     * @return string
+     */
+    public function actionSpace()
+    {
+        return $this->render('soon-available');
+    }
+
+    /**
+     * Displays about page.
+     *
+     * @return string
+     */
+    public function actionChart()
+    {
+        return $this->render('soon-available');
     }
 }

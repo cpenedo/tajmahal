@@ -14,7 +14,7 @@ $config = [
                 'app*' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     //'basePath' => '@app/messages',
-                    //'sourceLanguage' => 'en-US',
+                    //'sourceLanguage' => 'en-EN',
                     'fileMap' => [
                         'app' => 'app.php',
                         'app/error' => 'error.php',
@@ -58,7 +58,15 @@ $config = [
             // send all mails to a file by default. You have to set
             // 'useFileTransport' to false and configure a transport
             // for the mailer to send real emails.
-            'useFileTransport' => true,
+            //'useFileTransport' => true,
+            'transport' => [
+                'class' => 'Swift_SmtpTransport',
+                'host' => 'localhost',
+                'username' => 'geral@tajmahalbar.com',
+                'password' => '*******',
+                'port' => '587',
+                'encryption' => 'tls',
+            ],
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,

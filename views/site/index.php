@@ -6,6 +6,7 @@ use yii\helpers\Html;
 
 $this->title = 'Taj Mahal Cocktail Bar';
 ?>
+
 <div class="site-index">
 
     <div class="jumbotron" style="padding-top: 0px !important;">

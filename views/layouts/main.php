@@ -60,12 +60,12 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Inicio', 'url' => ['/site/index']],
-            ['label' => 'O Conceito', 'url' => ['/site/concept']],
-            ['label' => 'O Espaço', 'url' => ['/site/contact']],
-            ['label' => 'Carta de Bar', 'url' => ['/site/contact']],
-            ['label' => 'Sobre Nós', 'url' => ['/site/about']],
-            ['label' => 'Contactos/Localização', 'url' => ['/site/contact']],
+            ['label' => Yii::t('app', 'Home'), 'url' => ['/site/index']],
+            ['label' => Yii::t('app', 'The Concept'), 'url' => ['/site/concept']],
+            ['label' => Yii::t('app', 'The Space'), 'url' => ['/site/space']],
+            ['label' => Yii::t('app', 'Bar Chart'), 'url' => ['/site/chart']],
+            ['label' => Yii::t('app', 'About Us'), 'url' => ['/site/about']],
+            ['label' => Yii::t('app', 'Contacts/Localization'), 'url' => ['/site/contact']],
         ],
     ]);
     NavBar::end();

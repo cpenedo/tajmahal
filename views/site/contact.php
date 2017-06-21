@@ -10,7 +10,7 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 
-$this->title = 'Contact';
+$this->title = Yii::t('app', 'Contact');
 $this->params['breadcrumbs'][] = $this->title;
 
 $coord = new LatLng(['lat' => 38.7066725, 'lng' => -8.973343]);

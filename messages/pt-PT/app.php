@@ -7,5 +7,14 @@
  */
 
 return [
-    'Partners:' => 'Parceiros:'
+    'Partners:' => 'Parceiros:',
+    'Home' => 'Inicio',
+    'The Concept' => 'O Conceito',
+    'The Space' => 'O Espaço',
+    'Bar Chart' => 'Carta de Bar',
+    'About Us' => 'Sobre Nós',
+    'Contacts/Localization' => 'Contactos/Localização',
+    'Available Soon' => 'Brevemente Disponível',
+    'Body' => 'Mensagem',
+    'Subject' => 'Assunto',
 ];
