@@ -8,6 +8,8 @@
 
 use yii\helpers\Html;
 
+$this->title = Yii::t('app', 'The Concept');
+
 ?>
 <div class="site-about">
     <p style="text-align: center">

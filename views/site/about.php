@@ -4,7 +4,7 @@
 
 use yii\helpers\Html;
 
-$this->title = 'Sobre Nós';
+$this->title = Yii::t('app', 'About Us');
 ?>
 <style>
     .tooltip {
@@ -66,17 +66,17 @@ $this->title = 'Sobre Nós';
     </p>
 
         <div class="row" style="color: white;">
-            <div class="col-md-3">
-                <?= \yii\helpers\Html::img('@web/images/jx1.jpg', ['onmouseover'=>"$(this).attr('src', '/images/jx1-subtitle.jpg');", 'onmouseout' => "$(this).attr('src', '/images/jx1.jpg');", 'style' => 'width: 200px; height: 200px;'])?>
+            <div class="col-md-3" style="text-align: center">
+                <?= \yii\helpers\Html::img('@web/images/jx1.jpg', ['onmouseover'=>"$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/jx1-subtitle.jpg');", 'onmouseout' => "$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/jx1.jpg');", 'style' => 'width: 200px; height: 200px;'])?>
             </div>
-            <div class="col-md-3">
-                <?= \yii\helpers\Html::img('@web/images/jx2.jpg', ['onmouseover'=>"$(this).attr('src', '/images/jx2-subtitle.jpg');", 'onmouseout' => "$(this).attr('src', '/images/jx2.jpg');", 'style' => 'width: 200px; height: 200px;'])?>
+            <div class="col-md-3" style="text-align: center">
+                <?= \yii\helpers\Html::img('@web/images/jx2.jpg', ['onmouseover'=>"$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/jx2-subtitle.jpg');", 'onmouseout' => "$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/jx2.jpg');", 'style' => 'width: 200px; height: 200px;'])?>
             </div>
-            <div class="col-md-3">
-                <?= \yii\helpers\Html::img('@web/images/tr1.jpg', ['onmouseover'=>"$(this).attr('src', '/images/tr1-subtitle.jpg');", 'onmouseout' => "$(this).attr('src', '/images/tr1.jpg');", 'style' => 'width: 200px; height: 200px;'])?>
+            <div class="col-md-3" style="text-align: center">
+                <?= \yii\helpers\Html::img('@web/images/tr1.jpg', ['onmouseover'=>"$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/tr1-subtitle.jpg');", 'onmouseout' => "$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/tr1.jpg');", 'style' => 'width: 200px; height: 200px;'])?>
             </div>
-            <div class="col-md-3">
-                <?= \yii\helpers\Html::img('@web/images/tr2.jpg', ['onmouseover'=>"$(this).attr('src', '/images/tr2-subtitle.jpg');", 'onmouseout' => "$(this).attr('src', '/images/tr2.jpg');", 'style' => 'width: 200px; height: 200px;'])?>
+            <div class="col-md-3" style="text-align: center">
+                <?= \yii\helpers\Html::img('@web/images/tr2.jpg', ['onmouseover'=>"$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/tr2-subtitle.jpg');", 'onmouseout' => "$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/tr2.jpg');", 'style' => 'width: 200px; height: 200px;'])?>
             </div>
         </div>
 

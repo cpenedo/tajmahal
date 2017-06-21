@@ -61,10 +61,10 @@ $config = [
             //'useFileTransport' => true,
             'transport' => [
                 'class' => 'Swift_SmtpTransport',
-                'host' => 'localhost',
+                'host' => 'mail.tajmahalbar.com',
                 'username' => 'geral@tajmahalbar.com',
-                'password' => '*******',
-                'port' => '587',
+                'password' => 'tajmahal7bar!',
+                'port' => '25',
                 'encryption' => 'tls',
             ],
         ],

@@ -3,6 +3,7 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
+use yii\bootstrap\Alert;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
@@ -15,7 +16,8 @@ AppAsset::register($this);
 
 <style>
     .wrap {
-        background-image: url("http://tajmahal.dev/images/bar3.jpg");
+        /*background-image: url("http://tajmahal.dev/images/bar3.jpg");*/
+        background-image: url("http://www.tajmahalbar.com/tajmahal/web/images/bar3.jpg");
         background-repeat:no-repeat;
 
         background-size: cover; /* for IE9+, Safari 4.1+, Chrome 3.0+, Firefox 3.6+ */
@@ -44,7 +46,8 @@ AppAsset::register($this);
     <?php
 
     // frame, rotate and save an image
-    Image::thumbnail('http://tajmahal.dev/images/taj-logo.jpg', 40, 40)
+    //Image::thumbnail('http://tajmahal.dev/images/taj-logo.jpg', 40, 40);
+    Image::thumbnail('http://www.tajmahalbar.com/tajmahal/web/images/taj-logo.jpg', 40, 40)
         ->save(Yii::getAlias('@webroot/images/logo.jpg'), ['jpeg_quality' => 100]);
 
     NavBar::begin([
@@ -63,14 +66,17 @@ AppAsset::register($this);
             ['label' => Yii::t('app', 'Home'), 'url' => ['/site/index']],
             ['label' => Yii::t('app', 'The Concept'), 'url' => ['/site/concept']],
             ['label' => Yii::t('app', 'The Space'), 'url' => ['/site/space']],
-            ['label' => Yii::t('app', 'Bar Chart'), 'url' => ['/site/chart']],
+            ['label' => Yii::t('app', 'Bar Menu'), 'url' => ['/site/chart']],
             ['label' => Yii::t('app', 'About Us'), 'url' => ['/site/about']],
             ['label' => Yii::t('app', 'Contacts/Localization'), 'url' => ['/site/contact']],
+            ['label' => \yii\helpers\Html::img('@web/images/portugal_flag.png', ['style' => 'width: 30px; height: 20px']), 'url' => ['/site/langpt']],
+            ['label' => \yii\helpers\Html::img('@web/images/united-kingdom-flag.png', ['style' => 'width: 30px; height: 20px']), 'url' => ['/site/langen']],
         ],
+        'encodeLabels' => false,
     ]);
     NavBar::end();
     ?>
-
+    <?= Alert::widget() ?>
     <div class="container">
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],

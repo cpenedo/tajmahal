@@ -8,6 +8,8 @@
 
 use yii\helpers\Html;
 
+$this->title = $title;
+
 ?>
 <div class="site-about">
     <p style="text-align: center">
