@@ -17,7 +17,9 @@ AppAsset::register($this);
 <style>
     .wrap {
         /*background-image: url("http://tajmahal.dev/images/bar3.jpg");*/
-        background-image: url("http://www.tajmahalbar.com/tajmahal/web/images/bar3.jpg");
+        /*background-image: url("http://tajmahal.dev/images/background-dourado.png");*/
+        background-image: url("http://tajmahal.dev/images/background-roxo.png");
+        /*background-image: url("http://www.tajmahalbar.com/tajmahal/web/images/bar3.jpg");*/
         background-repeat:no-repeat;
 
         background-size: cover; /* for IE9+, Safari 4.1+, Chrome 3.0+, Firefox 3.6+ */
@@ -69,6 +71,7 @@ AppAsset::register($this);
             ['label' => Yii::t('app', 'Bar Menu'), 'url' => ['/site/chart']],
             ['label' => Yii::t('app', 'About Us'), 'url' => ['/site/about']],
             ['label' => Yii::t('app', 'Contacts/Localization'), 'url' => ['/site/contact']],
+            ['label' => Yii::t('app', 'Recruitment'), 'url' => ['/site/recruitment']],
             ['label' => \yii\helpers\Html::img('@web/images/portugal_flag.png', ['style' => 'width: 30px; height: 20px']), 'url' => ['/site/langpt']],
             ['label' => \yii\helpers\Html::img('@web/images/united-kingdom-flag.png', ['style' => 'width: 30px; height: 20px']), 'url' => ['/site/langen']],
         ],

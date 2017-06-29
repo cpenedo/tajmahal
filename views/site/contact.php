@@ -38,7 +38,7 @@ $map = new Map([
 $map->addOverlay($marker);
 
 ?>
-<div class="site-contact" style="color: white;;">
+<div class="site-contact" style="color: white;">
     <p style="text-align: center">
         <?= \yii\helpers\Html::img('@web/images/tm_logo_branco_baixo.png', ['style' => 'width: 400px; height: 130px; margin: 10px 10px'])?>
     </p>
@@ -61,11 +61,6 @@ $map->addOverlay($marker);
         </p>
 -->
     <?php else: ?>
-
-        <p>
-            If you have business inquiries or other questions, please fill out the following form to contact us.
-            Thank you.
-        </p>
 
         <div class="row">
             <div class="col-md-6">

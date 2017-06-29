@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\RecruitmentForm;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -9,6 +10,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use yii\web\UploadedFile;
 
 class SiteController extends Controller
 {
@@ -186,5 +188,36 @@ class SiteController extends Controller
         $title = Yii::t('app', 'Bar Menu');
 
         return $this->render('soon-available', ['title' => $title]);
+    }
+
+    public function actionRecruitment()
+    {
+        $model = new RecruitmentForm();
+
+        if ($model->load(Yii::$app->request->post())) {
+
+            $model->cv = UploadedFile::getInstance($model, 'cv');
+
+            if($model->cv) {
+                $randName = rand(9999, 999999);
+                $model->cv->saveAs('cv/' . $model->cv->baseName . $randName . '.' . $model->cv->extension);
+                if($model->contact(Yii::$app->params['adminEmail'], $randName)) {
+                    Yii::$app->session->setFlash('Success', Yii::t('app', 'Email Sent!'));
+                }
+                return $this->redirect(['recruitment']);
+            }
+
+            /*if($model->upload()) {
+                if($model->contact(Yii::$app->params['adminEmail'])) {
+                    Yii::$app->session->setFlash('Success', Yii::t('app', 'Email Sent!'));
+                }
+                return $this->redirect(['recruitment']);
+            }*/
+
+            //return $this->render('entry-confirm', ['model' => $model]);
+        } else {
+            // either the page is initially displayed or there is some validation error
+            return $this->render('recruitment', ['model' => $model]);
+        }
     }
 }
