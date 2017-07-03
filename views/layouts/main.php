@@ -18,8 +18,9 @@ AppAsset::register($this);
     .wrap {
         /*background-image: url("http://tajmahal.dev/images/bar3.jpg");*/
         /*background-image: url("http://tajmahal.dev/images/background-dourado.png");*/
-        background-image: url("http://tajmahal.dev/images/background-roxo.png");
+        /*background-image: url("http://tajmahal.dev/images/background-roxo.png");*/
         /*background-image: url("http://www.tajmahalbar.com/tajmahal/web/images/bar3.jpg");*/
+        background-image: url("http://www.tajmahalbar.com/tajmahal/web/images/background-dourado.png");
         background-repeat:no-repeat;
 
         background-size: cover; /* for IE9+, Safari 4.1+, Chrome 3.0+, Firefox 3.6+ */
@@ -46,9 +47,8 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 <div class="wrap">
     <?php
-
     // frame, rotate and save an image
-    //Image::thumbnail('http://tajmahal.dev/images/taj-logo.jpg', 40, 40);
+    //Image::thumbnail('http://tajmahal.dev/images/taj-logo.jpg', 40, 40)
     Image::thumbnail('http://www.tajmahalbar.com/tajmahal/web/images/taj-logo.jpg', 40, 40)
         ->save(Yii::getAlias('@webroot/images/logo.jpg'), ['jpeg_quality' => 100]);
 

@@ -5,6 +5,7 @@
 use yii\helpers\Html;
 
 $this->title = 'Taj Mahal Cocktail Bar';
+//echo \yii\helpers\Url::to('@web/images/partners/logo.jpg') . "\n";
 ?>
 
 <div class="site-index">
@@ -31,7 +32,7 @@ $this->title = 'Taj Mahal Cocktail Bar';
     <div class="body-content" style="color: white;">
     <div class="row">
         <div class="col-lg-12">
-            <h4><?= Yii::t('app', 'Partners:') ?></h4>
+            <h5><?= Yii::t('app', 'Partners:') ?></h5>
         </div>
     </div>
                 <div class="row" style="padding: 10px">

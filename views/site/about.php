@@ -66,17 +66,21 @@ $this->title = Yii::t('app', 'About Us');
     </p>
 
         <div class="row" style="color: white;">
-            <div class="col-md-3" style="text-align: center">
-                <?= \yii\helpers\Html::img('@web/images/jx1.jpg', ['onmouseover'=>"$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/jx1-subtitle.jpg');", 'onmouseout' => "$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/jx1.jpg');", 'style' => 'width: 200px; height: 200px;'])?>
+            <div class="col-md-3" style="text-align: center; margin-bottom: 5%">
+                <?php //echo \yii\helpers\Html::img('@web/images/jx1.jpg', ['onmouseover'=>"$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/jx1-subtitle.jpg');", 'onmouseout' => "$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/jx1.jpg');", 'style' => 'width: 200px; height: 200px;'])?>
+                <?= \yii\helpers\Html::img('@web/images/jx1.jpg', ['onmouseover'=>"$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/jx1-subtitle.jpg');", 'onmouseout' => "$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/jx1.jpg');", 'style' => 'max-width: 80%;'])?>
             </div>
-            <div class="col-md-3" style="text-align: center">
-                <?= \yii\helpers\Html::img('@web/images/jx2.jpg', ['onmouseover'=>"$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/jx2-subtitle.jpg');", 'onmouseout' => "$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/jx2.jpg');", 'style' => 'width: 200px; height: 200px;'])?>
+            <div class="col-md-3" style="text-align: center; margin-bottom: 5%">
+                <?php //echo \yii\helpers\Html::img('@web/images/jx2.jpg', ['onmouseover'=>"$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/jx2-subtitle.jpg');", 'onmouseout' => "$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/jx2.jpg');", 'style' => 'width: 200px; height: 200px;'])?>
+                <?= \yii\helpers\Html::img('@web/images/jx2.jpg', ['onmouseover'=>"$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/jx2-subtitle.jpg');", 'onmouseout' => "$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/jx2.jpg');", 'style' => 'max-width: 80%;'])?>
             </div>
-            <div class="col-md-3" style="text-align: center">
-                <?= \yii\helpers\Html::img('@web/images/tr1.jpg', ['onmouseover'=>"$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/tr1-subtitle.jpg');", 'onmouseout' => "$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/tr1.jpg');", 'style' => 'width: 200px; height: 200px;'])?>
+            <div class="col-md-3" style="text-align: center; margin-bottom: 5%">
+                <?php //echo \yii\helpers\Html::img('@web/images/tr1.jpg', ['onmouseover'=>"$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/tr1-subtitle.jpg');", 'onmouseout' => "$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/tr1.jpg');", 'style' => 'width: 200px; height: 200px;'])?>
+                <?= \yii\helpers\Html::img('@web/images/tr1.jpg', ['onmouseover'=>"$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/tr1-subtitle.jpg');", 'onmouseout' => "$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/tr1.jpg');", 'style' => 'max-width: 80%;'])?>
             </div>
-            <div class="col-md-3" style="text-align: center">
-                <?= \yii\helpers\Html::img('@web/images/tr2.jpg', ['onmouseover'=>"$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/tr2-subtitle.jpg');", 'onmouseout' => "$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/tr2.jpg');", 'style' => 'width: 200px; height: 200px;'])?>
+            <div class="col-md-3" style="text-align: center; margin-bottom: 5%">
+                <?php //echo \yii\helpers\Html::img('@web/images/tr2.jpg', ['onmouseover'=>"$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/tr2-subtitle.jpg');", 'onmouseout' => "$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/tr2.jpg');", 'style' => 'width: 200px; height: 200px;'])?>
+                <?= \yii\helpers\Html::img('@web/images/tr2.jpg', ['onmouseover'=>"$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/tr2-subtitle.jpg');", 'onmouseout' => "$(this).attr('src', 'http://www.tajmahalbar.com/tajmahal/web/images/tr2.jpg');", 'style' => 'max-width: 80%;'])?>
             </div>
         </div>
 
