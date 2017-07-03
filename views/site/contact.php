@@ -32,12 +32,19 @@ $marker->attachInfoWindow(
 $map = new Map([
     'center' => $coord,
     'zoom' => 17,
+    'styles' => 'style: max-width: 100%'
 ]);
 
 // Add marker to the map
 $map->addOverlay($marker);
 
 ?>
+<style>
+    #gmap0-map-canvas {
+        max-width: 100% !important;
+    }
+</style>
+
 <div class="site-contact" style="color: white;">
     <p style="text-align: center">
         <?= \yii\helpers\Html::img('@web/images/tm_logo_branco_baixo.png', ['style' => 'width: 400px; height: 130px; margin: 10px 10px'])?>
@@ -86,8 +93,9 @@ $map->addOverlay($marker);
                 <?php ActiveForm::end(); ?>
 
             </div>
-            <div class="col-md-6" style="padding-left: 57px;">
-                <?php echo $map->display()?>
+            <div class="col-md-6">
+                <!--style="padding-left: 57px;">-->
+                <div style="width: 100%"><?php echo $map->display()?></div>
             </div>
         </div>
 

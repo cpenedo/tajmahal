@@ -74,7 +74,7 @@ $this->title = Yii::t('app', 'Recruitment Form');
                         'showRemove' => true,
                         'showUpload' => false,
                         'browseClass' => 'btn btn-primary btn-block',
-                        'browseIcon' => '<i class="fa fa-picture-o"></i> ',
+                        //'browseIcon' => '<i class="fa fa-picture-o"></i> ',
                         'browseLabel' =>  Yii::t('app', 'Select CV')
                     ],
                     'options' => ['accept' => 'pdf', 'multiple' => false]]) ?>
@@ -83,6 +83,7 @@ $this->title = Yii::t('app', 'Recruitment Form');
         <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
             'template' => '<div class="col-md-3"><div class="pull-right">{image}</div></div><div class="col-md-3">{input}</div>',
         ]) ?>
+
     </div>
 
     <div class="form-group">
