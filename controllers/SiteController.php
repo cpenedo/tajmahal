@@ -62,7 +62,7 @@ class SiteController extends Controller
             Yii::$app->language = Yii::$app->session->get('language');
         } else {
             //or you may want to set lang session, this is just a sample
-            Yii::$app->language = 'en-EN';
+            Yii::$app->language = 'pt-PT';
         }
         return parent::beforeAction($action);
     }

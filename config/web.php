@@ -5,10 +5,13 @@ $db = require(__DIR__ . '/db.php');
 
 $config = [
     'id' => 'basic',
-    'language' => 'en-EN',
+    'language' => 'pt-PT',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
+    'bootstrap' => ['log', 'devicedetect'],
     'components' => [
+        'devicedetect' => [
+            'class' => 'alexandernst\devicedetect\DeviceDetect'
+        ],
         'i18n' => [
             'translations' => [
                 'app*' => [

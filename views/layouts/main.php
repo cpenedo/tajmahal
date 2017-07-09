@@ -20,7 +20,7 @@ AppAsset::register($this);
         /*background-image: url("http://tajmahal.dev/images/background-dourado.png");*/
         /*background-image: url("http://tajmahal.dev/images/background-roxo.png");*/
         /*background-image: url("http://www.tajmahalbar.com/tajmahal/web/images/bar3.jpg");*/
-        background-image: url("http://www.tajmahalbar.com/tajmahal/web/images/background-dourado.png");
+        background-image: url("http://www.tajmahalbar.com/tajmahal/web/images/background-roxo.png");
         background-repeat:no-repeat;
 
         background-size: cover; /* for IE9+, Safari 4.1+, Chrome 3.0+, Firefox 3.6+ */
@@ -49,8 +49,10 @@ AppAsset::register($this);
     <?php
     // frame, rotate and save an image
     //Image::thumbnail('http://tajmahal.dev/images/taj-logo.jpg', 40, 40)
-    Image::thumbnail('http://www.tajmahalbar.com/tajmahal/web/images/taj-logo.jpg', 40, 40)
+
+    /*Image::thumbnail('http://www.tajmahalbar.com/tajmahal/web/images/taj-logo.jpg', 40, 40)
         ->save(Yii::getAlias('@webroot/images/logo.jpg'), ['jpeg_quality' => 100]);
+    */
 
     NavBar::begin([
         'brandLabel' => \yii\helpers\Html::img('@web/images/tm_logo_branco_baixo.png', ['style' => 'width: 80px; height: 35px, padding-bottom: 10px;'])
@@ -88,11 +90,23 @@ AppAsset::register($this);
     </div>
 </div>
 
-<footer class="footer">
+<footer class="footer" style="background-color: #222; border-top: 1px solid #080808; padding-top: 5px !important;">
     <div class="container">
-        <p style="text-align: center">&copy; Taj Mahal The Premium Cocktail Bar <?= date('Y') ?></p>
+        <div style="text-align: center; color: #9d9d9d;">
+            <p style="margin-bottom: 5px !important;">&copy; Taj Mahal The Premium Cocktail Bar <?= date('Y') ?></p>
+            <p style="margin-bottom: 5px !important;">by <a href="https://www.linkedin.com/in/claudio-penedo-fct" target="_blank">Cláudio Penedo</a></p>
+        </div>
     </div>
 </footer>
+
+<!--<footer class="footer" style="background-color: #222; border-top: 1px solid #080808">
+    <div class="container" style="padding-top: 10px;">
+        <p style="text-align: center;color: #9d9d9d;/* font-size: small; */">© Taj Mahal The Premium Cocktail Bar 2017 </p>
+        <p style="text-align: center;font-size=7px;font-size: 12px;">
+            by <a href="https://www.linkedin.com/in/claudio-penedo-fct" target="_blank">Cláudio Penedo</a>
+        </p>
+    </div>
+</footer>-->
 
 <?php $this->endBody() ?>
 </body>

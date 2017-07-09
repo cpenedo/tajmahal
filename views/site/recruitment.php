@@ -13,10 +13,25 @@ $this->title = Yii::t('app', 'Recruitment Form');
 
 ?>
 <div class="site-contact" style="color: white;">
+
     <p style="text-align: center">
-        <?= \yii\helpers\Html::img('@web/images/tm_logo_branco_baixo.png', ['style' => 'width: 400px; height: 130px; margin: 10px 10px'])?>
+        <?php //echo \yii\helpers\Html::img('@web/images/tm_logo_branco_baixo.png', ['style' => 'width: 400px; height: 130px; margin: 10px 10px'])?>
+        <?php
+        $widthDevice = null;
+        if(Yii::$app->params['devicedetect']['isMobile'] || Yii::$app->params['devicedetect']['isTablet']) {
+            $widthDevice = '80%';
+        } elseif(Yii::$app->params['devicedetect']['isDesktop']) {
+            $widthDevice = '40%';
+        }
+        ?>
+        <?= \yii\helpers\Html::img('@web/images/taj-vect-logo.png', ['style' => "max-width: $widthDevice"])?>
     </p>
-    <h1><?= Html::encode($this->title) ?></h1>
+
+    <?php if(Yii::$app->params['devicedetect']['isMobile'] || Yii::$app->params['devicedetect']['isTablet']) : ?>
+        <h3 style="color: white; text-align: center; padding-bottom: 10px"><?= Html::encode($this->title) ?></h3>
+    <?php elseif (Yii::$app->params['devicedetect']['isDesktop']) : ?>
+        <h1 style="color: white; text-align: center; padding-bottom: 10px"><?= Html::encode($this->title) ?></h1>
+    <?php endif; ?>
 
     <?php if (Yii::$app->session->hasFlash('Success')): ?>
         <div class="alert alert-success">
@@ -59,7 +74,7 @@ $this->title = Yii::t('app', 'Recruitment Form');
     <div class="row">
         <div class="col-md-12">
             <?= $form->field($model, 'motivation')->textarea(['rows' => 6, 'style' => 'resize:vertical',
-                'placeholder' => "Não sendo obrigatório, aconcelhamos mensionar as suas motivações, a disponibilidade horária e a que procura, vencimento pretendido...entre outras indicações que achar relevantes à actividade.",
+                'placeholder' => Yii::t('app', "Not being mandatory, we advise you to denote your motivations, the availability schedule and the demand, the desired salary...among other indications that you find relevant to the activity."),
             ]) ?>
         </div>
     </div>
